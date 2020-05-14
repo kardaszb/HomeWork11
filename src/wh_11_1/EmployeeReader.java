@@ -4,7 +4,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-public class EmoloyeeReader {
+public class EmployeeReader {
 
     static Employe[] readFromFile(String file) throws FileNotFoundException {
         final int linesNumber = countLines(file);
@@ -12,13 +12,13 @@ public class EmoloyeeReader {
         try (Scanner scanner = new Scanner(new File(file))) {
             for (int i = 0; i < linesNumber; i++) {
                 String fileLine = scanner.nextLine();
-                employes[i] = createEmp(fileLine);
+                employes[i] = createEmployee(fileLine);
             }
         }
         return employes;
     }
 
-    private static Employe createEmp(String fileLine) {
+    private static Employe createEmployee(String fileLine) {
         String[] data = fileLine.split(";");
         String firstName = data[0];
         String lastName = data[1];
@@ -38,5 +38,4 @@ public class EmoloyeeReader {
         }
         return lines;
     }
-
 }

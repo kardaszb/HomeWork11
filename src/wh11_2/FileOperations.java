@@ -29,7 +29,7 @@ public class FileOperations {
         return lines;
     }
 
-    static void fileWriter(String fileName, String nextLine) {
+    static void writeToFile(String fileName, String nextLine) {
         try (
                 var fileWriter = new FileWriter(fileName, true);
                 var writer = new BufferedWriter(fileWriter);
@@ -41,7 +41,7 @@ public class FileOperations {
         }
     }
 
-    static void fileReader(String fileName) {
+    static void readFile(String fileName) {
         try (
                 var fileReader = new FileReader(fileName);
                 var reader = new BufferedReader(fileReader);
@@ -55,7 +55,7 @@ public class FileOperations {
         }
     }
 
-    static void fileChecker(String fileName){
+    static void checkFileExist(String fileName){
         try
         {
             Files.deleteIfExists(Paths.get(fileName));

@@ -10,9 +10,9 @@ class Test {
             for (MathValues mathValue : mathValues) {
                 System.out.println(mathValue);
             }
-            FileOperations.fileChecker(MathOperations.RESULTS_FILE_NAME);
-            MathOperations.mathOperations(mathValues);
-            FileOperations.fileReader(MathOperations.RESULTS_FILE_NAME);
+            FileOperations.checkFileExist(MathOperations.RESULTS_FILE_NAME);
+            MathOperations.writeMathOperationsTofile(mathValues);
+            FileOperations.readFile(MathOperations.RESULTS_FILE_NAME);
         } catch (FileNotFoundException ex) {
             System.err.println(ex.getMessage());
         }

@@ -4,7 +4,7 @@ import java.io.*;
 
 class Test {
     public static void main(String[] args) {
-        final String FILE_NAME = "TestFile.txt";
+        final String FILE_NAME = "TestFile1.txt";
         final String RESULTS_FILE_NAME = "testResults.txt";
         try {
             Employe[] employes = EmployeeReader.readFromFile(FILE_NAME);
